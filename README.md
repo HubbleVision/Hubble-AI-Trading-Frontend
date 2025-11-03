@@ -27,7 +27,7 @@ trading/
 │   │   ├── order/                # Order management
 │   │   ├── positions/            # Position tracking
 │   │   ├── analysis-team/        # Analysis team records
-│   │   ├── client.chart/         # PnL chart visualization
+│   │   ├── client.chart/         # Account balance chart visualization
 │   │   ├── client.order/         # Order list UI
 │   │   └── client.portfolio/     # Portfolio display
 │   ├── routes/                   # React Router routes
@@ -72,13 +72,13 @@ See [`app/features/README.md`](app/features/README.md) for detailed module struc
 ## 🔑 Key Features
 
 ### AI Trading Management
-- **AI Traders**: Manage AI trader accounts, track balances and PnL for algorithmic trading strategies
+- **AI Traders**: Manage AI trader accounts, track account balances for algorithmic trading strategies
 - **Smart Orders**: Intelligent order lifecycle tracking (NEW, FILLED, CANCELED) with AI-driven decision support
 - **Real-time Positions**: Live position monitoring and historical analysis for AI trading systems
 - **Analysis Team**: Store and retrieve AI-generated trading analysis and strategy records
 
 ### Client Interfaces
-- **Interactive Charts**: Real-time PnL curve visualization with AI trader selection and analytics
+- **Interactive Charts**: Real-time account balance curve visualization with AI trader selection and analytics
 - **Smart Order Lists**: Advanced filtering and display for AI-generated trading orders
 - **Portfolio Dashboards**: Comprehensive portfolio views for AI trading strategies
 
@@ -86,7 +86,7 @@ See [`app/features/README.md`](app/features/README.md) for detailed module struc
 
 ```
 GET    /api/v1/traders                    # List traders
-GET    /api/v1/traders/pnl                # Get PnL data
+GET    /api/v1/traders/pnl                # Get account balance data
 GET    /api/v1/traders/latest-balance     # Latest balances
 GET    /api/v1/orders                     # Query orders
 POST   /api/v1/orders/import              # Import orders
@@ -239,4 +239,4 @@ This project is open-source, allowing the community to contribute, customize, an
 
 ## 📝 License
 
-Private project - All rights reserved
+MIT License - See LICENSE file for details

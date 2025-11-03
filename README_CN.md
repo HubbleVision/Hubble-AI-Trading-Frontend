@@ -27,7 +27,7 @@ trading/
 │   │   ├── order/                # 订单管理
 │   │   ├── positions/            # 持仓追踪
 │   │   ├── analysis-team/        # 分析团队记录
-│   │   ├── client.chart/         # PnL 图表可视化
+│   │   ├── client.chart/         # 账户余额图表可视化
 │   │   ├── client.order/         # 订单列表 UI
 │   │   └── client.portfolio/     # 投资组合展示
 │   ├── routes/                   # React Router 路由
@@ -72,13 +72,13 @@ app/features/{feature-name}/
 ## 🔑 核心功能
 
 ### AI 交易管理
-- **AI 交易员**: 管理 AI 交易员账户，追踪算法交易策略的余额和盈亏
+- **AI 交易员**: 管理 AI 交易员账户，追踪算法交易策略的账户余额
 - **智能订单**: 完整的订单生命周期追踪 (NEW, FILLED, CANCELED)，支持 AI 驱动的决策辅助
 - **实时持仓**: AI 交易系统的实时持仓监控和历史分析
 - **分析团队**: 存储和检索 AI 生成的交易分析和策略记录
 
 ### 客户端界面
-- **交互式图表**: 实时 PnL 曲线可视化，支持 AI 交易员选择和分析
+- **交互式图表**: 实时账户余额曲线可视化，支持 AI 交易员选择和分析
 - **智能订单列表**: AI 生成交易订单的高级筛选和展示
 - **投资组合看板**: AI 交易策略的综合投资组合视图
 
@@ -86,7 +86,7 @@ app/features/{feature-name}/
 
 ```
 GET    /api/v1/traders                    # 获取交易员列表
-GET    /api/v1/traders/pnl                # 获取盈亏数据
+GET    /api/v1/traders/pnl                # 获取账户余额数据
 GET    /api/v1/traders/latest-balance     # 最新余额
 GET    /api/v1/orders                     # 查询订单
 POST   /api/v1/orders/import              # 导入订单
@@ -239,5 +239,5 @@ pnpm destroy
 
 ## 📝 许可证
 
-私有项目 - 保留所有权利
+MIT 许可证 - 详见 LICENSE 文件
 
